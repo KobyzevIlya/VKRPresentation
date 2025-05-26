@@ -1,0 +1,5 @@
+Package: main-riscv
+Version: 1.0
+Architecture: riscv64
+Maintainer: Ilya <KobyzevIlya@gmail.com>
+Description: simple RISC-V artifact

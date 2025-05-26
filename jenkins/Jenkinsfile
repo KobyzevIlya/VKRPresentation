@@ -1,0 +1,18 @@
+pipeline {
+    agent { label 'board' }
+
+    stages {
+        stage('Generate jobs from DSL') {
+            steps {
+                script {
+                    jobDsl(
+                        targets: 'jobs/**/*.groovy',
+                        removedJobAction: 'DELETE',
+                        removedViewAction: 'DELETE',
+                        lookupStrategy: 'SEED_JOB'
+                    )
+                }
+            }
+        }
+    }
+}

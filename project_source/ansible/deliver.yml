@@ -1,0 +1,8 @@
+- name: Deploy compiled binary to board
+  hosts: board
+  tasks:
+    - name: Copy binary to /home/work/
+      copy:
+        src: /home/work/build-and-deploy/main
+        dest: /home/user/testbin/main
+        mode: '0755'
