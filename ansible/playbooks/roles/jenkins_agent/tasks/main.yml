@@ -1,0 +1,18 @@
+- name: Create jenkins user
+  user:
+    name: jenkins
+    shell: /bin/bash
+    state: present
+
+- name: Ensure dependencies are present
+  apt:
+    name:
+      - git
+      - curl
+    state: present
+
+- name: Download agent.jar
+  get_url:
+    url: "http://192.168.10.105:8080/jnlpJars/agent.jar"
+    dest: "/home/jenkins/agent.jar"
+    mode: '0644'

@@ -1,0 +1,5 @@
+- name: Подготовка RISC-V плат
+  hosts: riscv
+  become: yes
+  roles:
+    - common

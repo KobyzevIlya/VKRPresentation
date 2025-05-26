@@ -1,0 +1,6 @@
+- name: Restore critical services
+  hosts: vms
+  become: yes
+  roles:
+    - wiki_restore
+    - jenkins_restore

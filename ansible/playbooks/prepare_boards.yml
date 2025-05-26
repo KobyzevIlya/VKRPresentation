@@ -1,0 +1,6 @@
+- name: Prepare RISC-V boards for Jenkins usage
+  hosts: boards
+  become: yes
+  roles:
+    - java
+    - jenkins_agent

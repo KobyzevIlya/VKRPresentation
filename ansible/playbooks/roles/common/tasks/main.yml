@@ -1,0 +1,7 @@
+# - name: Обновить apt и установить базовые пакеты
+#   apt:
+#     name: [git, curl, htop]
+#     update_cache: yes
+#     state: present
+- name: Проверка соединения с платой
+  shell: date > /tmp/ansible_test_{{ inventory_hostname }}

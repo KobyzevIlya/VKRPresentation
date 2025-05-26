@@ -1,0 +1,8 @@
+- name: Ensure apt is up to date
+  apt:
+    update_cache: yes
+
+- name: Install OpenJDK
+  apt:
+    name: openjdk-11-jdk
+    state: present

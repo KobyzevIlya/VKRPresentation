@@ -1,0 +1,6 @@
+- name: Restart wiki service
+  become: true
+  ansible.builtin.systemd:
+    name: wikijs
+    state: restarted
+    enabled: true
